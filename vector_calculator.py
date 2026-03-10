@@ -70,4 +70,5 @@ def plot_vector(P1, P2):
 # Execute the main functions
 main_manual()
 main_numpy()
+P1, P2 = input_two_points()  # Get the points again for plotting
 plot_vector(P1, P2)
