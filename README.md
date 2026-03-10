@@ -22,6 +22,6 @@ library, and via NumPy, allowing direct comparison between the two approaches.
 python vector_calculator.py
 
 ## Example input
-Digite os valores de x e y do ponto P1(x,y), separados por espaço: 1 2
-Digite os valores de x e y do ponto P2(x,y), separados por espaço: 4 6
+Write the values of x and y of P1(x,y), separated by space: 1 2
+Write the values of x and y of P2(x,y), separated by space: 4 6
 
