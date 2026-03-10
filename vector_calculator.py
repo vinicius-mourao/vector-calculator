@@ -1,6 +1,7 @@
 # Import the necessary libraries
 import math
 import numpy as np
+import matplotlib.pyplot as plt
 
 def input_two_points():
   """Function to input a point and return it as a tuple of floats."""
@@ -40,6 +41,33 @@ def main_numpy():
    print(f"Using NumPy, the vector formed by the points P1 and P2 is: {tuple(float(x) for x in vector)}")
    print(f"The magnitude of the vector is: {magnitude:.2f}")
 
+def plot_vector(P1, P2):
+    """Function to plot the vector using Matplotlib."""
+
+    # Create a figure and axis
+    plt.figure(figsize=(8, 8))
+
+    # Plot the points P1 and P2
+    plt.plot(P1[0], P1[1], 'ro', label='P1')
+    plt.plot(P2[0], P2[1], 'bo', label='P2')
+
+    # Plot the vector from P1 to P2
+    plt.arrow(P1[0], P1[1], P2[0] - P1[0], P2[1] - P1[1],
+             head_width= 0.05, head_length= 0.05 , fc='black', ec='black')
+
+    # Set the limits and labels
+    plt.xlim(min(P1[0], P2[0]) - 1, max(P1[0], P2[0]) + 1)
+    plt.ylim(min(P1[1], P2[1]) - 1, max(P1[1], P2[1]) + 1)
+    plt.xlabel('X-axis')
+    plt.ylabel('Y-axis')
+    plt.title('Vector from P1 to P2')
+    plt.legend()
+    plt.grid()
+
+    # Show the plot
+    plt.show()
+
 # Execute the main functions
 main_manual()
 main_numpy()
+plot_vector(P1, P2)
